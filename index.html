@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+  <title>Shreyas' Website</title>
+  <style>
+.markdown-container img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.markdown-container h2 {
+  font-weight: bold;
+}
+
+.markdown-container ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+  </style>
+</head>
+<body class="bg-white relative">
+<style>
+/* Add necessary dark mode styles for the footer */
+.dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
+  background-color: #333333;
+}
+.dark-mode {
+  background-color: #1a1a1a;
+}
+.dark-mode footer,
+.dark-mode footer .text-gray-600 {
+  color: #f8f8f8;
+}
+    .dark-mode .text-white,
+    .dark-mode .text-black,
+    .dark-mode .text-gray-900,
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode h3,
+    .dark-mode h4,
+    .dark-mode .bg-white .card-content,
+    .dark-mode .bg-white div {
+      color: #f8f8f8;
+    }
+    .dark-mode .bg-white {
+      background-color: #1a1a1a;
+    }
+    .dark-mode .shadow-md {
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
+    }
+  </style>
+  <div id="particles-js"></div>
+<nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
+    <div>
+      <span class="text-black font-bold">shreyas</span><span class="text-black"></span>
+    </div>
+    <button id="dark-mode-toggle" class="ml-4 p-2  text-black rounded shadow-md">🌓</button>
+  </nav>
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <div id="header-container" class="px-4 py-5 mt-8 space-x-4">
+      <h1 class="text-8xl font-bold mb-10">Shreyas Hari</h1>
+      <h2 class="text-xl mb-3">
+        Computer Science & Business @ <span style="color: #bf0c0c;">Carnegie Mellon University</span>
+        <br><b>Cheers!</b></h2>
+      <br>
+      <div class="flex space-x-4">
+        <a href="https://www.linkedin.com/in/shreyashari/" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:shreyas.hari@gmail.com" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/Shreyas-Hari" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/shreyas.h9/" target="_blank" class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+  </div>
+  <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
+    <div id="posts-container" class="w-full md:w-1/3 px-4 py-5 mb-5 md:mb-0">
+      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-briefcase"></i> My Experience</h3>
+      <div id="posts-list-manual" class="space-y-4">
+        <!-- The Home Depot Experience -->
+        <div class="markdown-container bg-white dark:bg-gray-800 p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+          <h2 class="text-xl font-semibold mb-2 dark:text-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/TheHomeDepot.svg/2560px-TheHomeDepot.svg.png" alt="Home Depot Logo" style="width: 50px; vertical-align: middle; margin-right: 10px;">
+            The Home Depot
+          </h2>
+          <em class="text-sm text-gray-600 dark:text-gray-300 block mt-2">May 2024 - August 2024</em>
+          <p class="text-base mt-2 leading-relaxed dark:text-gray-300">Software Engineer Intern on the Search Engine Relevancy & Recommendations Team</p>
+          <br>
+        </div>
+      
+        <!-- ICBiome Inc. Experience -->
+        <div class="markdown-container bg-white dark:bg-gray-800 p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-700 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+          <h2 class="text-xl font-semibold mb-2 dark:text-white">
+            <img src="https://lh6.googleusercontent.com/proxy/5A1kwEYWDVHFLFOL9SFuzPUefJKIj6d3bXgQi1GtQY9b2ddoFT66wI2qgbWNjM4OkbPMjx1SIuFeBHRGbsCosuydvLYCqj0JzZ04sVS7nVZyd25jU1LzcPaPMw" alt="ICBiome Logo" style="width: 100px; vertical-align: middle; margin-right: 10px;">
+            ICBiome Inc.
+          </h2>
+          <em class="text-sm text-gray-600 dark:text-gray-300 block mt-2">May 2023 - August 2023</em>
+          <p class="text-base mt-2 leading-relaxed dark:text-gray-300">Software Engineer Intern</p>
+          <br>
+          <strong><a href="http://www.icbiome.com/" target="_blank" class="dark:text-blue-400">http://www.icbiome.com/</a></strong>
+        </div>
+      </div>
+
+    <!-- Skills Section -->
+    <h3 class="text-2xl font-semibold mb-4 mt-20 dark:text-white"><i class="fa-solid fa-laptop-code"></i> Skills</h3> <!-- Title for Skills Section -->
+    <section id="skills" class="p-8 mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-md"> <!-- Added background, rounded corners, and shadow -->
+      <p class="text-gray-700 dark:text-gray-300 mb-6">My Professional Skills.</p>
+
+      <!-- Tabs -->
+      <div class="flex space-x-4 mb-6"> <!-- Adjusted spacing for tabs -->
+        <button id="languagesTab" class="bg-gray-200 dark:bg-gray-700 dark:text-white px-4 py-2 rounded shadow-md" onclick="showSkills('languages')">Languages</button>
+        <button id="technologiesTab" class="bg-gray-200 dark:bg-gray-700 dark:text-white px-4 py-2 rounded shadow-md" onclick="showSkills('technologies')">Technologies</button>
+      </div>
+
+      <!-- Skills Container -->
+      <div id="skillsContainer">
+        <!-- Languages -->
+        <div id="languages" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" style="width: 24px; margin-right: 10px;">Python
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java" style="width: 24px; margin-right: 10px;">Java
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C" style="width: 24px; margin-right: 10px;">C
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/golang.png" alt="Go" style="width: 24px; margin-right: 10px;">Go
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/ios-filled/50/000000/lambda.png" alt="SML" style="width: 24px; margin-right: 10px;">Standard ML (SML)
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" style="width: 24px; margin-right: 10px;">SQL
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" style="width: 24px; margin-right: 10px;">HTML
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" style="width: 24px; margin-right: 10px;">JavaScript
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++" style="width: 24px; margin-right: 10px;">C++
+          </span>
+          <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-2 rounded-md flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/assembly.png" alt="Assembly" style="width: 24px; margin-right: 10px;">Assembly
+          </span>
+        </div>
+
+        <!-- Technologies (Hidden by Default) -->
+      <!-- Technologies (Hidden by Default) -->
+      <div id="technologies" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 hidden">
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS" style="width: 24px; margin-right: 10px;">AWS
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP" style="width: 24px; margin-right: 10px;">GCP
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" style="width: 24px; margin-right: 10px;">Docker
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" style="width: 24px; margin-right: 10px;">React
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" style="width: 24px; margin-right: 10px;">MongoDB
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" style="width: 24px; margin-right: 10px;">TensorFlow
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch" style="width: 24px; margin-right: 10px;">PyTorch
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://camo.githubusercontent.com/da98ec6b2b0968e19a6c8a7328f87af31202808b8851d7bd034f08b6d98ccaac/68747470733a2f2f6173736574732d676c6f62616c2e776562736974652d66696c65732e636f6d2f3632303362366435373832333130303834376566643962312f3635663431353935643337663533663731376464316636395f6c616e67636861696e25323069636f6e2e706e67" alt="LangChain" style="width: 24px; margin-right: 10px;">LangChain
+        </span>
+        <span class="bg-gray-300 dark:bg-gray-800 text-gray-900 dark:text-gray-300 px-4 py-3 rounded-md flex items-center text-sm">
+          <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" style="width: 24px; margin-right: 10px;">Git
+        </span>
+      </div>
+
+      </div>
+    </section>
+
+    <!-- Coursework Section -->
+    <h3 class="text-2xl font-semibold mb-4 mt-20 dark:text-white flex items-center">
+      <img src="https://m.media-amazon.com/images/I/61FfobmZ6ML._AC_SL1000_.jpg" alt="Carnegie Mellon Logo" style="width: 30px; height: 30px; margin-right: 10px;"> 
+      Coursework
+    </h3> <!-- Title for Coursework Section -->
+    <section id="coursework" class="p-8 mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-md"> <!-- Added background, rounded corners, and shadow -->
+    <p class="text-gray-700 dark:text-gray-300 mb-6">What I've Learned.</p>
+
+    <!-- Tabs -->
+    <div class="flex space-x-4 mb-6"> <!-- Adjusted spacing for tabs -->
+      <button id="mathCsTab" class="bg-gray-200 dark:bg-gray-700 dark:text-white px-4 py-2 rounded shadow-md" onclick="showCoursework('mathCs')">Math/CS</button>
+      <button id="businessTab" class="bg-gray-200 dark:bg-gray-700 dark:text-white px-4 py-2 rounded shadow-md" onclick="showCoursework('business')">Business</button>
+    </div>
+
+    <!-- Coursework Container -->
+    <div id="courseworkContainer">
+    <!-- Math/CS Courses -->
+    <div id="mathCs" class="flex flex-col space-y-4">
+      <!-- Math Courses -->
+      <div>
+        <h4 class="text-lg font-semibold dark:text-gray-300">Math:</h4>
+        <ul class="list-none text-gray-700 dark:text-gray-300">
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 21-259: Calculus in 3-Dimensions
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 21-127: Concepts of Mathematics (Discrete Math)
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 21-241: Matrices & Linear Transformations
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 36-218: Probability Theory for Computer Scientists
+          </li>
+        </ul>
+      </div>
+    
+      <!-- CS Courses with links-->
+      <!--<div>
+        <h4 class="text-lg font-semibold dark:text-gray-300">CS:</h4>
+        <ul class="list-none text-gray-700 dark:text-gray-300">
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 15-112: Fundamentals of Programming & Computer Science
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/~112/" target="_blank" class="text-blue-500 underline dark:text-blue-300">15-112 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 15-122: Principles of Imperative Computation
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/~15122/" target="_blank" class="text-blue-500 underline dark:text-blue-300">15-122 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 15-150: Principles of Functional Programming
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/~15150/" target="_blank" class="text-blue-500 underline dark:text-blue-300">15-150 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 18-213: Computer Systems
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/afs/cs/academic/class/18213-f23/www/" target="_blank" class="text-blue-500 underline dark:text-blue-300">18-213 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 10-301: Introduction to Machine Learning
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/~mgormley/courses/10601/" target="_blank" class="text-blue-500 underline dark:text-blue-300">10-301 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 15-210: Parallel and Sequential Data Structures and Algorithms
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://www.cs.cmu.edu/~15210/" target="_blank" class="text-blue-500 underline dark:text-blue-300">15-210 Course Website</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex flex-col">
+            <div class="flex items-center">
+              <span class="text-yellow-500 mr-2">★</span> 15-316: Software Foundations of Security & Privacy
+            </div>
+            <ul class="ml-8">
+              <li class="flex items-center">
+                <span class="mr-2">-</span>
+                <a href="https://15316-cmu.github.io/2023/index.html" target="_blank" class="text-blue-500 underline dark:text-blue-300">15-316 Course Website</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>-->
+
+
+      <!-- CS Courses -->
+      <div>
+        <h4 class="text-lg font-semibold dark:text-gray-300">CS:</h4>
+        <ul class="list-none text-gray-700 dark:text-gray-300">
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 15-112: Fundamentals of Programming & Computer Science
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 15-122: Principles of Imperative Computation
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 15-150: Principles of Functional Programming
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 18-213: Computer Systems
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 10-301: Introduction to Machine Learning
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 15-210: Parallel and Sequential Data Structures and Algorithms
+          </li>
+          <li class="flex items-center">
+            <span class="text-yellow-500 mr-2">★</span> 15-316: Software Foundations of Security & Privacy
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    
+    
+    
+
+
+    <!-- Business Courses (Hidden by Default) -->
+    <div id="business" class="flex flex-col space-y-4 hidden">
+      <ul class="list-none text-gray-700 dark:text-gray-300">
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 73-230: Intermediate Microeconomics
+        </li>
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 70-415: Introduction to Entrepreneurship
+        </li>
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 70-110: Business Computing
+        </li>
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 70-340: Business Communications
+        </li>
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 70-122: Introduction to Accounting
+        </li>
+        <li class="flex items-center">
+          <span class="text-yellow-500 mr-2">★</span> 70-391: Finance
+        </li>
+      </ul>
+    </div>
+    </div>
+    </section>
+
+
+
+    </div>
+    <div id="projects-container" class="w-full md:w-2/3 px-4 py-5 mb-5 md:mb-0">
+      <h3 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-code"></i> Projects</h3>
+      <div id="projects-list-personal" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-wrap">
+    
+      <!-- Pokémon Showdown 112 Project -->
+      <div class="project-item bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);">
+        <div class="flex">
+          <img src="assets/thumbnail2.png" alt="First Image" class="w-1/2 h-56 object-cover">
+          <img src="assets/thumbnail.png" alt="Second Image" class="w-1/2 h-56 object-cover object-bottom">
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-semibold dark:text-white">Pokémon Showdown 112</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">A Pokémon battle simulator featuring Competitive & Casual Game AI.</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2">
+              <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-6 h-6">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" alt="PyTorch" class="w-6 h-6">
+              <img src="https://storage.googleapis.com/replit/images/1619744706953_a11b5e0a6acf250ac95d9b46d5a2673f.jpeg" alt="Tkinter" class="w-6 h-6">
+            </div>
+            <a href="https://github.com/Shreyas-Hari/Pokemon-Showdown-112" target="_blank">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub" class="w-6 h-6">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Website Project -->
+      <div class="project-item bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);">
+        <div class="flex">
+          <img src="assets/websitethumbnail.png" alt="Website Thumbnail" class="w-full h-56 object-cover object-bottom">
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-semibold dark:text-white">My Website</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">The website you are viewing right now.</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2">
+              <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="Javascript" class="w-6 h-6">
+              <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" class="w-6 h-6">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/768px-CSS3_logo.svg.png" alt="CSS" class="w-6 h-6">
+            </div>
+            <a href="https://github.com/Shreyas-Hari/my-website" target="_blank">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub" class="w-6 h-6">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Interrupt Assistant Project -->
+      <div class="project-item bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);">
+        <div class="flex">
+          <img src="https://mma.prnewswire.com/media/118058/THE_HOME_DEPOT_LOGO_v1.jpg?p=facebook" alt="Search Interrupt Thumbnail" class="w-full h-56 object-bottom ">
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-semibold dark:text-white">Search Interrupt Assistant</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">An AI Chat Bot built on RAG architecture to help 651 Search Engine Engineers. Ongoing development...</p>
+          <div class="flex justify-between items-center">
+            <div class="flex space-x-2">
+              <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-6 h-6">
+              <img src="https://camo.githubusercontent.com/da98ec6b2b0968e19a6c8a7328f87af31202808b8851d7bd034f08b6d98ccaac/68747470733a2f2f6173736574732d676c6f62616c2e776562736974652d66696c65732e636f6d2f3632303362366435373832333130303834376566643962312f3635663431353935643337663533663731376464316636395f6c616e67636861696e25323069636f6e2e706e67" alt="Langchain" class="w-6 h-6">
+              <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" class="w-6 h-6">
+              <img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP" class="w-6 h-6">
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    
+      </div>
+    </div>
+    </div>
+  </div>
+    <script>
+      document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+  
+        const toggleBtn = document.getElementById("dark-mode-toggle");
+        const isDarkModeOn = document.body.classList.contains("dark-mode");
+  
+        toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
+      });
+    </script>
+    <script>
+      function showSkills(category) {
+        const languages = document.getElementById('languages');
+        const technologies = document.getElementById('technologies');
+        const languagesTab = document.getElementById('languagesTab');
+        const technologiesTab = document.getElementById('technologiesTab');
+    
+        if (category === 'languages') {
+          languages.classList.remove('hidden');
+          technologies.classList.add('hidden');
+          languagesTab.classList.add('bg-gray-400');
+          technologiesTab.classList.remove('bg-gray-400');
+        } else {
+          languages.classList.add('hidden');
+          technologies.classList.remove('hidden');
+          languagesTab.classList.remove('bg-gray-400');
+          technologiesTab.classList.add('bg-gray-400');
+        }
+      }
+    </script>
+    <script>
+      function showCoursework(category) {
+        const mathCs = document.getElementById('mathCs');
+        const business = document.getElementById('business');
+        const mathCsTab = document.getElementById('mathCsTab');
+        const businessTab = document.getElementById('businessTab');
+
+        if (category === 'mathCs') {
+          mathCs.classList.remove('hidden');
+          business.classList.add('hidden');
+          mathCsTab.classList.add('bg-gray-400');
+          businessTab.classList.remove('bg-gray-400');
+        } else {
+          mathCs.classList.add('hidden');
+          business.classList.remove('hidden');
+          mathCsTab.classList.remove('bg-gray-400');
+          businessTab.classList.add('bg-gray-400');
+        }
+      }
+
+      // Set the default tab to Math/CS
+      document.getElementById('mathCsTab').click();
+    </script>
+    <div id="favorites-container" class="w-full px-4 py-5">
+      <h3 class="text-2xl font-semibold mb-4"><i class="fas fa-heart"></i> My Favorites</h3>
+      <div id="favorites" class="flex flex-wrap mx-auto md:-mx-2 md:space-x-4">
+        <!-- One Piece Favorite -->
+        <div class="favorite-item bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden p-4">
+          <img src="https://mangainsider.com/wp-content/uploads/2022/02/One-Piece-History-and-Overview-Pillar.png" alt="One Piece" class="w-full h-40 object-cover">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+  <script>
+      const postsList = document.getElementById('posts-list');
+    const projectsList = document.getElementById('projects-list');
+    const converter = new showdown.Converter({
+      simpleLineBreaks: true,
+      strikethrough: true,
+      tables: true,
+    });
+    const baseUrl = "https://api.github.com/repos/tobwil/markdown_website/contents/";
+    const folders = ['posts', 'projects', 'listening'];
+
+    async function fetchMarkdownFiles(folder) {
+      const response = await fetch(`${baseUrl}${folder}`);
+      const files = await response.json();
+      function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+      }
+
+      const randomFiles = shuffleArray(files);
+      const maxVisibleItems = folder === 'posts' ? 3 : folder === 'projects' ? 5 : Infinity;
+      let itemCount = 0;
+
+      for (const file of randomFiles) {
+        if (file.name.endsWith('.md')) {
+          const fileRes = await fetch(file.download_url);
+          const mdContent = await fileRes.text();
+          const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
+          const htmlContent = converter.makeHtml(mdWithLineBreaks);
+
+          const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
+          const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
+          const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
+          const fileCard = `
+              <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+                <h2 class="text-xl font-semibold mb-2">${title}</h2>
+                <div>${htmlContentWithoutTitle}</div>
+              </div>
+          `;
+
+          if (itemCount < maxVisibleItems) {
+            if (folder === 'posts') {
+              postsList.innerHTML += fileCard;
+            } else if (folder === 'projects') {
+              projectsList.innerHTML += fileCard;
+            } else if (folder === 'listening') {
+              document.getElementById('listening-list').innerHTML += fileCard;
+            }
+          } else {
+            if (folder !== 'listening') {
+              const hiddenCard = `<div class='hidden'>${fileCard}</div>`;
+              if (folder === 'posts') {
+                postsList.innerHTML += hiddenCard;
+              } else if (folder === 'projects') {
+                projectsList.innerHTML += hiddenCard;
+              }
+            }
+          }
+          itemCount++;
+        }
+      }
+
+    if (folder !== 'listening' && itemCount > maxVisibleItems) {
+      const container = folder === 'posts' ? postsList : projectsList;
+      createShowMoreButton(container);
+    }
+  }
+
+        const createShowMoreButton = (container) => {
+        const button = document.createElement('button');
+        button.innerHTML = '➕ Show More';
+        button.classList.add('show-more');
+        button.style.color = 'gray'; // Set the text color to gray
+        button.style.marginTop = '10px'; // Add some margin on top
+        container.after(button);
+
+        button.addEventListener('click', () => {
+            const hiddenItems = container.querySelectorAll('.hidden');
+            hiddenItems.forEach(item => item.classList.remove('hidden'));
+            button.remove();
+        });
+    };
+
+    folders.forEach(folder => {
+        fetchMarkdownFiles(folder);
+    });
+  </script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#888888'
+        },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 0,
+            color: '#000000'
+          },
+          polygon: {
+            nb_sides: 5
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#888888',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'repulse'
+          },
+          onclick: {
+            enable: false
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+  <script src="https://unpkg.com/elevator.js"></script>
+  <script>
+    const elevator = new Elevator({
+      mainAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/elevator.mp3",
+      endAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/ding.mp3",
+      duration: 5000,
+    });
+
+const footer = document.createElement("footer");
+footer.className = "mt-8 mb-4";
+const footerContent = document.createElement("div");
+footerContent.className = "flex items-center justify-between";
+footer.appendChild(footerContent);
+
+const copyright = document.createElement("div");
+copyright.className = "hidden md:flex";
+footerContent.appendChild(copyright);
+
+const madeWith = document.createElement("div");
+madeWith.className = "hidden md:flex";
+footerContent.appendChild(madeWith);
+
+const elevatorBtnDiv = document.createElement("div");
+elevatorBtnDiv.innerHTML = 'Click Me - Enjoy :)&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
+elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
+elevatorBtnDiv.onclick = () => {
+  elevator.elevate();
+};
+
+footerContent.appendChild(elevatorBtnDiv);
+document.body.appendChild(footer);
+  </script>
+    <style>
+      @keyframes pulsate {
+        0% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+      }
+      #scroll-down-btn i {
+        animation: pulsate 1.5s linear infinite;
+      }
+    </style>
+    <button id="scroll-down-btn" class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
+      <i class="fa-solid fa-v"></i>
+    </button>
+    <script>
+      const scrollDownBtn = document.getElementById('scroll-down-btn');
+      const headerContainer = document.getElementById('header-container');
+
+      const toggleScrollButtonVisibility = () => {
+        if (window.pageYOffset === 0) {
+          scrollDownBtn.style.display = 'flex';
+        } else {
+          scrollDownBtn.style.display = 'none';
+        }
+      }
+
+      scrollDownBtn.addEventListener('click', () => {
+        const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
+        window.scrollTo({top: yOffset, behavior: 'smooth'});
+      });
+
+      window.addEventListener('scroll', toggleScrollButtonVisibility);
+      toggleScrollButtonVisibility();
+    <script src="js/main.js"></script>
+</body>
+</html>
